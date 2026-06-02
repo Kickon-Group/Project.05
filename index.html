@@ -16,82 +16,56 @@ body{font-family:var(--font);color:var(--body);background:#dfe4ea;font-size:13px
 h1{font-weight:700;font-size:30px;color:var(--navy);text-transform:uppercase;line-height:1;}
 h2{font-size:13px;font-weight:700;letter-spacing:.8px;color:var(--navy);text-transform:uppercase;margin:22px 0 2px;}
 h2+.divider{margin:5px 0 11px;}
-.sub{font-size:13px;color:var(--mid);margin-top:7px;}
-.meta{font-size:11px;color:var(--grey);margin-top:5px;}
-/* landing */
+.sub{font-size:13px;color:var(--mid);margin-top:7px;}.meta{font-size:11px;color:var(--grey);margin-top:5px;}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;}
-.choice{background:#fff;border:1px solid #e2e8f0;border-radius:9px;padding:26px;cursor:pointer;transition:.15s;border-top:4px solid var(--blue);}
-.choice:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,31,58,.10);}
-.choice h3{font-size:18px;color:var(--navy);margin-bottom:6px;}
-.choice p{font-size:12.5px;color:var(--body);}
-.choice .ic{font-size:30px;margin-bottom:8px;}
+.choice{background:#fff;border:1px solid #e2e8f0;border-radius:9px;padding:26px;cursor:pointer;border-top:4px solid var(--blue);}
+.choice:hover{box-shadow:0 8px 20px rgba(11,31,58,.10);}
+.choice h3{font-size:18px;color:var(--navy);margin-bottom:6px;}.choice p{font-size:12.5px;}.choice .ic{font-size:30px;margin-bottom:8px;}
 .btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:5px;padding:10px 18px;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.4px;cursor:pointer;text-transform:uppercase;}
 .btn.alt{background:#fff;color:var(--navy);border:1.5px solid var(--navy);}
-.btn:hover{opacity:.92;}
-.navrow{display:flex;gap:10px;margin-bottom:6px;}
-.link{color:var(--steel);font-size:11px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;}
-/* steps */
-ol.steps{margin:6px 0 0 0;padding-left:20px;} ol.steps li{font-size:12.5px;line-height:1.55;margin:6px 0;} ol.steps li b{color:var(--navy);}
+.navrow{display:flex;gap:10px;margin-bottom:6px;}.link{color:var(--steel);font-size:11px;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.4px;}
+ol.steps{margin:6px 0 0 0;padding-left:20px;}ol.steps li{font-size:12.5px;line-height:1.55;margin:6px 0;}ol.steps li b{color:var(--navy);}
 .panel{background:#fff;border:1px solid #e2e8f0;border-radius:7px;padding:16px 18px;margin-top:10px;}
 .drop{border:2px dashed #b9c6d6;border-radius:8px;padding:22px;text-align:center;background:#fbfcfd;}
-.drop input{margin-top:8px;}
-.field{margin:10px 0;} .field label{font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:4px;}
-.field input[type=date]{font-family:var(--font);padding:7px 10px;border:1px solid #cbd5e1;border-radius:5px;font-size:13px;}
-.msg{font-size:12px;padding:9px 13px;border-radius:5px;margin-top:10px;}
-.msg.ok{background:#e3f3e8;color:var(--green);} .msg.warn{background:#fff3e0;color:var(--amber);} .msg.err{background:#fde6e6;color:var(--red);}
-/* stats */
+.field{margin:10px 0;}.field label{font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:4px;}
+.field input{font-family:var(--font);padding:8px 11px;border:1px solid #cbd5e1;border-radius:5px;font-size:13px;}
+.msg{font-size:12px;padding:9px 13px;border-radius:5px;margin-top:10px;}.msg.ok{background:#e3f3e8;color:var(--green);}.msg.warn{background:#fff3e0;color:var(--amber);}.msg.err{background:#fde6e6;color:var(--red);}
+.lock{max-width:420px;margin:60px auto;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:30px;text-align:center;}
+.lock .ic{font-size:34px;}.lock h2{margin:10px 0 4px;}.lock input{width:100%;text-align:center;margin-top:12px;}
 .band{background:var(--navy);color:#fff;border-radius:8px;padding:15px 20px;margin:14px 0;display:flex;gap:30px;flex-wrap:wrap;align-items:center;}
-.band .lbl{font-size:9px;letter-spacing:1.5px;color:var(--blue);text-transform:uppercase;margin-bottom:3px;}
-.band .big{font-size:30px;font-weight:700;line-height:1;}
-.band .s{font-size:10px;color:#dbe6f2;}
+.band .lbl{font-size:9px;letter-spacing:1.5px;color:var(--blue);text-transform:uppercase;margin-bottom:3px;}.band .big{font-size:30px;font-weight:700;line-height:1;}.band .s{font-size:10px;color:#dbe6f2;}
 table{border-collapse:collapse;width:100%;font-size:12px;}
-th,td{border:1px solid #d8e0ea;padding:7px 9px;text-align:right;}
-th:first-child,td:first-child{text-align:left;}
+th,td{border:1px solid #d8e0ea;padding:7px 9px;text-align:right;}th:first-child,td:first-child{text-align:left;}
 th{background:var(--navy);color:#fff;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.3px;}
-tbody tr:nth-child(even){background:#eef2f7;}
-td b{color:var(--navy);}
-tr.grouprow td{background:var(--mid);color:#fff;font-weight:700;border-color:var(--mid);}
+tbody tr:nth-child(even){background:#eef2f7;}td b{color:var(--navy);}
 .pill{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.4px;padding:2px 8px;border-radius:11px;text-transform:uppercase;}
 .pill.green{background:#e3f3e8;color:var(--green);}.pill.amber{background:#fff3e0;color:var(--amber);}.pill.red{background:#fde6e6;color:var(--red);}.pill.grey{background:#eef2f7;color:#5a7080;}
-.mixrow{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:11px;}
-.mixname{width:96px;font-weight:600;color:var(--navy);}
-.mixbar{flex:1;height:16px;border-radius:3px;overflow:hidden;display:flex;}
-.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:10.5px;margin:6px 0 2px;color:var(--body);}
-.legend span{display:inline-flex;align-items:center;gap:5px;}
-.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
-.footer{background:var(--mid);color:#cdd8e6;padding:11px 34px;font-size:10px;display:flex;justify-content:space-between;}
-.footer .r{color:var(--blue);font-weight:500;}
-.note{font-size:11px;color:var(--grey);line-height:1.5;background:#eef3f9;border-left:4px solid var(--steel);border-radius:3px;padding:11px 14px;margin-top:12px;}
-.note b{color:var(--mid);}
+.mixrow{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:11px;}.mixname{width:96px;font-weight:600;color:var(--navy);}.mixbar{flex:1;height:16px;border-radius:3px;overflow:hidden;display:flex;}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:10.5px;margin:6px 0 2px;}.legend span{display:inline-flex;align-items:center;gap:5px;}.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+.footer{background:var(--mid);color:#cdd8e6;padding:11px 34px;font-size:10px;display:flex;justify-content:space-between;}.footer .r{color:var(--blue);font-weight:500;}
+.note{font-size:11px;color:var(--grey);line-height:1.5;background:#eef3f9;border-left:4px solid var(--steel);border-radius:3px;padding:11px 14px;margin-top:12px;}.note b{color:var(--mid);}
 </style></head>
 <body><div class="wrap">
 <div class="header"><img class="brandlogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADyCAYAAABznUiZAAAo2UlEQVR4nO2deZgcVfW/P3eyEhLCDmExAZGdILuCoCKuiLggmyAq/HBFFkWRryCiCAqKigiKC4ggyr6KgIjKDgYB2QMEQgiBkJB9mfS8vz9OTaanU91dVV3d1dNz3ufpJ5PuqnvPrb6frlv3nntOkFMYwEhJ60kaL2ljSRMkbSBpHUmrS1pF0sqSRkoaJmmopCGSQnkx0Utl/1atMvq3J/q7R1JJ0rLotVTSEkmLJS2UNF/SXElvSJol6bXo9WrZ37NDCPPTtdzJi1D/ECcvgHUkbS1pZ0k7StpcJuCxGnjfxRJJCyTNlvSKpKmSJkt6OnpNkfRqCKHej4rTAAOt0wwogJUlbSvp3dFroqS1CjWqdbwu6TlJD0m6W9L9kp4JISwr1KoOwwWcM9FddjdJH5L0TkmbFGtR27BY0pOSbpd0o6T7QggLijVp4OMCzgFgguwO+2FJ75C0dqEGDQyeknSdpMtCCJOKNmag4gLOANAlaQtJe0naW/ZMO7ZQowYuSyXdIel8STeGEJYWa87AwgWckGjGeDtJH5T0Adnz7IhCjeo8HpB0tqQrQgjdRRszEHAB1wAYLru77isT7pbya9YK7pT03RDCbUUb0u54Z4wB2EzSJyXtJ7vT+nVqPT2SLpb0nRDCC0Ub0654x4wAhkh6j6QjJb1f0uhiLXIipks6SdLvfE15RQa9gKMJqX0lHStp94LNcapzlaSvhRCmFG1IOzGoBQy8U9LJkvYs2hYnES9JOi6EcHnRhrQLg1LAkbPFdyQdIfMxdgYOSDpH0v+5D/YgFDDwUUlnyj2kBjr3SPp8COHRog0pkkEjYGA1Sd+X9EV1XruRtEi2g2iBbBfRwui9xZK6o1ePrO1dsp1Nw2U7nVaS7XrqfY2K3mt3Zko6JoRwSdGGFEWndeRYgN0knSvbWDBQmStphmzXzxRJL0R/vyzryLMlzZOJdkkaRwggyATdK+ZVJK0m23gxTtKbZFsdx6tvu2M7zdL/VDakXli0Ia2mowUczTAfJ+kU2Z1lINAjWzp5WtL/JD0i2wTwomx73uICbRMwSubrPUHmTrpN9NpE0rrFWaY7JB0ZQnimQBtaTscKGNhQ0s8lfbRgU+qxWLaP9kHZtruHJE0OIbxRpFFpAdaQtKmk7SXtKmkHWZCCVk4SvizpKyGEq1tYZ6F0pICBfWTinVCwKdV4XibWv0u6V9KznebEH/mObyoT83skvU02/G42Jdkk5SkhhCUtqK9QOkrAwBjZcPloWeiZdqFbNhS+WdItkh4KIcwr1qTWEk0i7iDbCPI+SVvJJtOaxW2yWernmliHkxfAO4AHaR+WAQ8A3wbeirlqOrJNIsAuwGnAI038DqZiozGnXQHGAmcAi5rYEdIwGTgT2BkYWvT1aXeAEcAewLnAi034PrqBUwB32Gk3gD2B/zbhS0/LQuBa4BPAKkVfl4EKsAZwCHArsDTn7+h6bGLTKRpgFHA6sCTnLzktU4EfAVsXfU06DWBH7K48I8fv61ngPUW3bVADbAPcmeOXmoVHgaOAwRJhsjCADYATgGdy+u4WAV/HnFecVgIcCszM6YvMwn3YEG9U0ddisIHNdXwe+/HMgz8BaxbdrkEBMBI4O6cvLgv3AftjIXacAgFWBj5HPkJ+BNi56DZ1NNgQ6pYcvqysX/ChuHDbDmA08CVs1r8R3gAOL7o9HQk2kfFkg19QFqYCRwPt5LDvxACsDpwEvNbgd34ulknDyQPgI7T+eXcBNlQfV3T7nXQAGwO/xdZ9s/IvYPOi2zLgAY6g9Y4ZNwM7Ft12pzGAd5VKpbsa6AfTgf2KbseABfgm0JOHIhMyFZsUaaZfrtNCMO+uY8g+rC4BZ+GrDenAfGNbyUW4d07HAmwGXNNA//gXsGXR7Wh7gAD8OAdBJuV54JNFt9tpPlHfOoLsHl0zgIOKbkfbEl3gn+Yiy2RcBrRiX6rTRgCbAn9toN+cjQ+pV4TW3XlnAZ8vur1OcQBDMbfMhRn70B2ARzPtBfhBTuKsx33AdkW312kPgHcCT2TsSy8C7y26DYUDnJiTOOvxa3yLn1MBsA5wecY+tRD4QtFtKAzgizR/qWgB8KWi2+q0L0AXFjElq/PHaQy2XU3AfuS/WbuSKYDnO3ISAXyc7GvG5zNYon0AuwNzchJpNe7BJxqclADbAY9l7HN/AEYU3Yamgi2qT81JpNW4Aot+6DipAdYH/p6x711Kp4oYi3U0KSeRVuMX+LY/p0GwbYqXZuyDl3RcHwSG0Zg7WxJOLrqdTueArRf/PGNfvJBOikaKhXxtFsuArxbdRqczAU7N2C/PoxM2x2Dxo5q1XLQUj6TgNBlsd1wWziza9oYAtgdm56XWCpYAhxbdRmdwABxHthvR/xVteyawMCfNSpnh4nVaDibitPQwED22sHWxZtANfLbo9jmDE+AbGfrsEgbS1lXgyFwl20cP8OWi2+cMboDvZui7c4F3F217XZYsWTIRC9PZDE4sun2OI0lk278+HZhYtO1VAVYC7s5Vsn38pOj2OU4vwBDg4gz9+EngTUXbHwvwvVwl28eldNLCuNMRTJ8+fWWyJRy4m3Zz9wV2AxbnqdqIfwJjim6f48SB7SnOkuLlWtrFbxrLVdMMP+dn8NhVTpsDbEW2gHnn0w57ick2K1ePOcAuRbfNcZIA7E22XNXFOnoA2wLzcxQu2HKRO2o4Awrg+Ax9vQQcUpTBQ4Bb81RuxI8LaZDjNAAWHvmSDP19LrBbEQZ/NlfZAqVS6Q5gZMsb4zg5QHYX4mdp5XwPsDb5R9d4BQ+F4wxwgJ2AeRn6/y20amaa/DMp9DCQ/EUdpwbAURl18P1WGDcRC9maJ+c33XDHaRFYuNqrM+hgKfC+Zht3RZ7KxSIBrtpUox2nxQAbAtMy6OFpYI1mGbUrjWVAr2QJA2GXhuNkANg/oy5+1iyDrsxPu4AvGTkdDtmWlhYDO+RtyDbk6+/8BDA2VyMdp80ANgBezqCP68jT1RI4K0fxloAP5Wac47QxwOcyaGQZsEdeBowGnstRwH/MxTDHGQCQ3Wvx+rwMeE+O4p0JTMjFMMcZIGC5l9ImFl8K7Fyr3KTBp/fKoQ29nBFCmJJjeY7T9oQQHpKU1t9hmKSjG64cuCOnu++jwMoNG+Q4AxDMBfmllJpZAGxRrcy6d2Asu/2bc2rDKSGEBTmV5TgDihDCq5LOSHnaKElHZa4U2Jh8XCdvB4ZkNsRxOgBgFOnD8MwBYm+iSZ6BV5e0UoN2lySdGkIoNViO4wxoQggLJaXdtLCKpK9kqhB4dw533+syVe44HQiWcvfelBp6HhhdWVaSO3Cjd99lkk5vsAzH6RhCCN1Kr4k3Sdq88s0kAm404/iNIYR7GizDcTqNGyWl0UWXpE3j3qxHIwIuSTqrgfMdpyMJISyTlHYzz9qVbyQR8LCUlZRzu6S7GjjfcTqZG3p6eh5OcfxbKt9IIuBRKSqo5GchBBo433E6lhDCkq6url+kOOWdQL8RcRIBrzDzlZBJkm7JeK7jDBYul/RCwmO3kNQv4UESAWfds/uraLbNcZwqhBDmSLoo4eFdkg6sfKMeWQQ8XdKVGc5znMHIRZLmJzx2b8oS/iUR8CoZDPpLCOH1DOc5zqAjhPCcpJsSHj5e0vJMDs0QcLeSDwkcxzF+l+LYfXv/SCLgtPl575GUZmrccRzpn5KeSHjsXsBKUjIBp92/e0kIoSflOY4zqAkhLJb054SHbyxpa6mOgLGoeGnWgWdLyieOj+MMPq6QtCTBcV2KnoPr3YGHSkqTLfC2EML0FMc7jtPH45LuT3js26X6Ah6idL7Ql6c41nGcMiKvxSsSHr4lMDyJgJNG0XhV0j8SHus4Tjw3SVqY4Lj1JY2rJ+Cg5JEr7wghzEx4rOM48Twr6cEEx42VNCGpOJPgk1eO0yDRMPqGBId2SdqonoCJXvWYK1vHchyncW6RRbKpR24C/k8IYWqC4xzHqc8Tkp5KcNyGSQScxCnjtgTHOI6TgBDCUkl3JDi07iRWkjswCStzHCc5f09wzBpJJrHqCfglSY8mKMdxnOQ8IJtbqsXYJAKul2T4PyGEeclschwnIdNknlm1GJ1kHbiegD1onePkTLScdHedw0Ym8cQaWuNzJN2XxjDHcZKxbNmyenGj67pSDlVtX+iZSr6H0XGcFAwdOvRhSYtrHDKknoBHRK9qPC3JQ+c4TnN4UbUjVnbVE/Bo1c6N9LDHfXac5hBCWKLaE1mhpoC7u7tXU+39wP/NYJfjOMn5b60Pa01QadiwYeuq+iw0kh7LZpMTxTRaWTZRuFTS/MEQRxsYKWv3MFkAxAVROBknnlo+FtQUsCz2TjXmSJqS2pyUANtJ+rL6koRPS3n+sZK2kk3GXRlCuDbBOaMknSppVUnXhBCS7A6pV+YQWVT9D0b/TpBtCRsqC6MyC3ha0r8l3RxCyDQ5CEyU9FXZD+ypaX3Uga9Kmii7XteEEK7KYkdZeaMk7SppL0k7ytJk9rZ7maQ5wAuyLXS3Sbo7hLCokTqjej8vaaeytzJ/j8AwSadIWqfio3+FEP6QzcLEPCO7TnFaLdU8E/hVjYTDj0UNayrAJ8rqnJjivC7g7LJzrwJWT3juasCs6LzvZrfe4ooB+wN3Az0JkzkvBK4G3pGhvn3LytkupZ1nlp17LbBG2vrLyhsDHAP8L2Gbe3kUOIqYZNYp67+motw5wK4ZyxoJvBhj64WN2Jiw7tWA6VWuVXVPLUwAtbKI39hs4yM7PhrV1w1snfCcYfT/8bmAFD82wKrAtOjcbzdg+0bAdRXX7TngYuA4TNj7Ap8CToqOfbXs2KXAzymLxJ+gzg9H55aAbROeMxQ4t6ze31ORRCtlu/cCHq7Rd5LwELBnAzb8OabMF4BNMpQ1Eng6prxfZ7UvRd1dwANVrtGsWieuB8yucYF/3mzjIztSCTi62BeX24kNX9PU2bCAly5duivwfJkd9wMHADUD5UfX/avA5LJz/wXUepwpPz+VgIERwIVldZ0LdR+tapV3DLC4Rr9Jw2LgqIx2xAkYTAyJRmJlZRUm4Kj+K6q0ZUatk/apc3GPbpHxiQUMjAauLLPxDCw0bto6GxIwsBN9d9KlwLexyZs0ZawFnF/WlmMSnpdYwMDK9O/oZ2W5XmXlnVCnzwDMB57FhtbPRf+vx9cz2FJNwGCPB4lHGBQv4B9VaUf1+Q3szlWLj7XI+EQCxp4Vbiqz7zsN1JlZwMC6wDPRuQuA/bPaEZV3IvBjEt4VSShgYCxwfdn1+l6Ddh5I7Wf8W4FDgI2BUdiwfeXo/4cCf69xbgnYL6U9tQQMcE6KsooW8JeqtGFytRNGYJNU1egBdok9OX/j6woYWBv4R5lt32iwzkYE/IfovBJwWCN2ZIEEAgbWBG7r/TKXLVt2YoN1TqD/s3s500jwI4ZNoh1ElQmbUqn0CrBhCpvqCRgS3tkpXsAfqWJ//DIusDOwrEbDF5DwmSwH42sKGNiAvsm2ZWR8ZqooM5OAgT3KrltLvtwYG2oKGBgH3FV2zLE51Pn7Kv1kMrBVyrIm0n/uoJwLUpSTRMDdwCcTlFW0gHcmfnQzqZon1r6qHQ96nmwduFCwH5EbZOuq3ZI+H0JIPDRqAsfJrtsMSZmH8M0CmCC7XrvK1ha/FEI4u8Eyt5B0QMxHcyUdFEJI5ewTQnhE0kGKz5d7MLBpeiurMlTSBWRcXmohryt+U8PiFQQMjFBZ+sIqzJW0IAfDMhN1nBslbStpkaTPhBB+W6A9b5b03ui/F7Zbipmo498oaXuZ48jhIYRf5VD0wYr3l/9hCOGBLAWGEO6VdGbMR6Nk4s6TsZIujb6/dmWu4n/QVhSwzHtlizoFzlGyJExNAXirrDNuLmvYISGES4uyJ2JPWQfrlnRZwbb0A3OAuUnSlj09PQslHZqHBxE2sbZ3zEfTJJ3XYPG/lBT3I7g3KZcFy5im+N094yVdRsrlpRayQPECXhQn4P1VPxvDnIJ2IS0AdpSJdyNJb0g6oFF3v5zozZo+WfVDobSKhZg31g2S3ixpbldX14EhhLxyWG0gKW5Ie30IYXYjBUdZPuKchTaXtF7GYqfKRgxxtu0o6Xc04MDSRJbIHlsr6X8Hxjx+9klQYL1gW82gW/Zrf73sC3xN0sdDCDcVYEs/sLXT3o78eBQWtGi6Jb1fdr02lD1H7RdCyDODxkaKzx+dV46suHLGRPVmYUQI4W5Jh8uuTyX7SvpxxrKbRgihpHgBL6y80+4uc7KvRxFB7EZIOkfSupJmSdo7hNAuydSGS1oz+vvFIg0pY7jseq0vG6nsE0K4Nec61o15r0eW3ycPJis+KmrlpoLEAF0hhKslfbPKIV8Bvpa1/CYSN+e0whA6qdNBERNYy9TXMVaSTca0C8PUF3oo7lmlCJbJBCDZnu5mXK+45O/LlF//WKD4HTe1gkwkIpp9/1mVj89IsrzUYuKuad8dGFhNfbOo9Wh4u1cGkPRp2WTMSpLOI6F7YQsoqa+j1QpB1Go+K+k6mYB/QQaXxDrEPSqkzSldi+GKn4/Ja9/08ZKujnm/d3np7TnVkwdxy0gLyi/Obko+OVDEDPQQWRC9AyTdLAs0cDZwfAG2VLJENkyVpHEF2lHOENmjxsHqy3Z3JnBCjnW8VqXeDXIqf0PFCziXNLZRAIXDJd0f8/FYSX+KfA0KW3EpI+7Hsp+Ak0xe9ZIkc1ozGB5CmC8TcW+n/BHwrYLskSSFEHrUF9xgcyDPtK2NMCyEsEC2dtobyOB04KScyn9B8R0rL8eIuHKWqHagt1REs+UHKT44xXhJf5K0lorr873E1T+/S1oe5uRdKQqrHQmgyYQQ5qp/p/xBjp0yE6VSqTcp8xayqBNtQ/Sjd7CkK6O3TqXBQAURUxQvpn0bXY6JHIo+EvPR81XqzEwI4TlZf3oj5uOdJV2k4h+N4pIMLr8DbyFbJxwwRJ3yU5J614BPBU4typ4hQ4b8XfbDNlrSh4uyoxohhIWSDpX0l+itk4HTGixzkeIT220tqdHdavsp3qHoH1G0xlyJvL+OUPzz9QdUO7xUUczrFfBuqu37XElWT5hciYaHh6ivU54E/KAgcx5SXwTBz5Ny/28riAR3mKRer7UTgR82WOwfFb/UcxqQabkHGCfp+zEf9Ui6JEuZSQghXKnqy0tFE/dYNr9cwGloeiyspJR1yj9Fb30L+FEBdnRL+kX0360lfaHVNiQhigD5OUkXR299A9tvnHUj/12Kvwu/WdKFpAgHJElYxJKLFO+P8HdJ9dKNNESd5aUiqdRcj6R5XdGdIlHspDKKfh7oR9QpP6u+Tnk88JMGOmVWLlPfjOYpwE61Dk4Ktuk9UTywJERD0MMl/T566zhJP8sy+RZ5CZ2k+MmsD0i6NukOImBzmedY3HLmEkknRxOGzaba8lKRVM4pdCu6A4+XTdenoeGF9LyJ6ZTHKmOnbMCGxZKOki26j5U5yKfaD1sJsIHsOf8fwF6NW2lEI4YjJfXusT1Ktlac+vEohHCXpGqjnndLugs4Bdi08vvAgrZtHs1f3ClpjyrlnB49pzadOstLRVGpuaWS5pdvmE/DxXE1NAPSB7UbikWh7OW8tJ2SxmNifRbbLA8wFfhg2jKicnYDHi9rS90IH6QPajckuka9/JoMQe2wSKD1NtHPx4LKXQb8Jjr+QSxARC0uSWtTFVsmkeIHHRv5PF/DrpYFbQBuqaj7NWA9Af9X5+LF0bLhBdnCylZ2ygtI0QHIISol8AVgSZntv8L2MCc5983YI8DC6PwlQKJnarKFle0Czim7Xr8jQ8xvLNbVpRn6Uy0uxrJYpLWlYQFH5byN6tFZWynguyvqfgFYVfQPwZqU21toeGoBR+dVdsrfk3BtkvziQn+QvgB3YHeg64AvA+8ANsFCAm2EdZT/h4UQfaPsnMnAh1LUmVrA0XmB/oHw/4CtxaZt8xDsppAk2mQt5mFRLjM9ApGTgKOyPoFFF62kVSF1hmIB78t5DBgh4N8ZLu5/sl7YDMZ/vKzebVKe2wX8tOz8P5NgVhQTcG+QtoZC42AB984AZsRcx0XAXOKHkDOxMK+plmLoHwDtrSnPDVGdvVxOnTjWNcraHvsxShsjehHwl7S2x9R/ZUzZj5L9B+HYmPJaEgEGC5c8paLue4AwVPFbwuoxVjYT3YpNDW/IkqiVVDvZ8QqEEHqwoG2LZK6ib5V0NHB6NHtajZKk/0laW9IrGWwut+FVSSdgYUw/ItvTvK1sS9xI9WV/7JH5+D4q28h+VQghi8fRHNn16lHK7ycK0vB1YJHMEWOipGOB79e5XnFlTZK0HzYK+JgsN9JmklZTfz+Cksxn+ylZbqSrQgi1Enol5XmtmHzvyayFhRDOxn5My510UuWdaoBRMgehcmaHEAjAa+rby5qU1yRtFUKIc2bPFWwpaKjMWaCUNRIIfc90wyQtqlcO9swcojpzXboAxso2jqwlm11cJttwP63Ra1rU9UpY5tqyzR6ry5ZFlsrEOz36ocsNbOKy8m5LCKEhn2b6zw30pP1hy1jnWyQ9ov6pfi8OIXx6qOL3dNZjjCxzX9MFHHWchrePlaXuTFRWo190nbLnyO6UmTIQ1im7kOuVsMxXJeUq1Bp1lW/xzLPcIlLArqkV83S/JtkvVBan85Gyu4fjOM0n7jH3FckEnNVbaf3M5jiOk4Y4R6vlAs46VByf2RzHcdIQF8RvuYBTzeyWMaC2HzrOAKZSwCVZ9g91KXuKFBew4zSZaDZ9QsXb8xSFFepSfPT7JIwng6eO4zipWF0rzjfNUhScvkt9oUfTMk4NxOd1HCcRG8icX8qZHu2DV5dsgTgLY9SeYUYcp5PYVCtGwFnuodclaZLiA2YloaG9ro7j1GVizHvLM190yXxvs3pUbZfxPMdxkhG3o+yZ3j+6QggzZCLOVHjW3R2O49QGGCVpy8q3VXEHlrJnk9tEPpHlOM1iI62Y5WKeyhLo9Qr4FmVz/F5V/hzsOM3irVoxGuXLKtsQ0ivgR5R9r+TbMp7nxACsDKxFjbjSWNSLYb2vFGWvBqxBjWidWBCE2DKjz1YITYRFjEhtj1OXuHDPk8vzT3dJUvTGdTlW4qQE2Aa4VLYu/7ykp4FfYsm1KjlT9qP7dHTcI1gYm9idZVhUk39Lei4q+yHgS3FilMXYvgdYPeazL0r6N7B8czmW1fJ22eb5cntOckef7EQeWHE3x37zVeVf4BWyeLhpIxJuB6weQpiV8jwnAni/7PrPkvQb2TrfFjIx7QbsFqWS6WUT2R7RC2S7ycbLMhkgqV9mCixc60mS/inpu7L4yntJOlfS7sBnKlKVrCNbuoiL5DlO0jYVnw2RtIOkB2VB3oPM9e9UWbCCE5NfCaeM8bIIJpU8HHt0NCy7KybuTxL2bGpTOhhgXeAV4F9z585ds+KzDYFdYs65Dri34r1rgSfKh8dYUD2ISWQGfCr67PiK94/HYnStsN8b+C4WoXFs2XtrRscfU3Hsb7E4YFkCRgx6gINjdNZNRVy45UtAUQSDizLW5wLOzoGy4AhfWGWVVWZKEjA8Gn6+LOn+KkPdYcCI6DVOdtd7rSL0zbGyoe0KSd9CCJfIckodnZPIKp+re0MFtSKTQicSF8T/Zdkj0HIq13CvVrRNKSXvwdeDs7KHpMdDCI9Ly599bpCt9U2RBXv7YsU5S2VD2ckygT4sE/ApvQdgz6nbS/prjbhN18gc5RtNh7pE0qeAC6PX7bJ0nedE2SqcFGBxsHeP+ejxikep/gKOAqr9RenZVu4XnZVRksq/FGTC+q0sE99GWjGkSpdsKeEi9YU22j2EUB6ve6hsCWJejbp76y2fbKoVoaVaYLse2bPzVtELWXK3lieZ6xCq6WmFVC9xQ7PfyHLmpJlBXEnSe5R9Z9Ng5klJhwJjQgjzogiYv5SWR8Y8QisKZ6gsguW3gUmSLpf0PvXfmDJP0jRJO9aoewdJi+fPn18eOnepbGIqTsjDZGKtvKOvJOmMEMJZNepykvMBxacTXSEz4woHhRAekXRrhkr3yXCOI/1ZtufzqzGfdUWvuBnh3iXAqySdLenM8snEaNh8iaS9gbdXngysLxua3zBmzJjyx6bHZD/e28fUubvsR3pBNXucxogeoeIycbyhpDsHgfcDPSlnomdHncJJCX3ZI84CtgBWB94C/CB6/8iK468DHij7/0gsw8ZLwHpl74/Fkoe9DnwaGIc5iXwIS5r2ChZzWBVl3YullvkgNsu8cZmN+1cc3zsL/Y1mXZ/BBOYP0JtTq5w7SZouF/OouT+lgAE+2+T2dSSYJ9PJWJqVEjAHWzKYBXyNillo4EbgoYr3NsYy1v2NslllYD3g6uj7WUhfzqJ7qJK+BJgA/CM6bh6WF2geFUtF0bFrRp+fkM/VGNxQPdng6XHH13KpO0zShSnr/2sIIXEiLqc/2N1zF9mE0AxJ94QQVkjtEglvRAjhvor3N5dNfvw7hDAv5pztZM/Pj0u6r1bwemwot6tsN8xcSXeFEF6MOW6YbCb92RDClKRtdVYEGNrT03NfV1dX3OPL+0MIt6QpbAyWGS8N84h3/XMcpw7ATtHIq5JXiHdtrT7xEP2C/yalDaNliawcx0nPAYpfGbo3k6syNukxM+Vd+EF8R4rjpCIa8T5fRVNH1i+hesG/SCngEhDnReI4ThWA/aroaQGQPQY7sC3x09q1+F2ObXOcjgf4axUt3UHS5aMMhVdjFr4m7DiJwNZ+F1fR0jG1zk3qPZN2Mms1SZ9KeY7jDFYOV7zr8kLZxpbGAEYDz6W8Cz8FrNxw5Y7TwQDrAK9W0VDddd9Ed+BoC9MVKW3bVNK+Kc9xnMHGoerbUVbJJbnVAuxA/CJzLe4lfjO64wx6qO0sNQNYs34pySsbAtyXUsAAH87NCMfpIIAjaujm/GZUeGwGAd+B+dU6jhMBrAT8r4pmuoGdm1HpBGzHTBp6gA/kbozjDGCAz9TQzD9pVogq+rampeFf+F3YcSQtD97/eA29HNzMyj+WQcAAH22aUY4zgMCC6lfjGcoC5zej8tHAsxkEPIka6UIcZzCARVuZUkMnzY9sAnwvg4ChkV0VjtMBAKfU0McMoPnZPrF4TQsyCPgFYI2mG+g4bQgW9mhWDX38sJXG/CWDgFtrpOO0EcAfauhiNjC+lca8E9v7m5b5wMSWGeo4bQCwJ7U9GX/aaoO66ItcmIpSqXQznorFGSRgThv/qSGJ2cCEIgzbO4uAIw5rucGOUwDACXW0cGZRhg3BvEayMI2yIOSO04kAWwJv1NDBjEJ1AOxFtmdhgIsLM9xxmgwWsP+WOhooPiA+cGVGAfcAnyzafsdpBsBRdfr/U8AqRdspLJ9P2k0OvbwEbFB0GxwnT4CtqT10BjiwaDuXA5yYUcAAV+Gz0k6HAIwslUp31unzf6OdNvhgWe3ubkDERxXdBsfJA+C0On19PrBt0XauADARW9PKwjxgp6Lb4DiNgKVkXVqnr59atJ1VAQ7LKGCAR6mSxMlx2h1gPDC1Th//L83cLpgHwI8aEPGl+POwM8DAHiFvq9O3FzMQ0g5h61+XNCDibxbdBsdJA3B2gn79/aLtTAwwimzhd8CeIT5SdBscJwnA4Qn69J3ASkXbmgos9k/WbYev4ruWnDYHeBc2q1yLmcAWRduaCWA46VOU9vI4MK7oNjhOHMBmmCNSLUq0k8NGVoBjgEUZRHw77T5r5ww6sJxG/03Qf88o2tbcAN5H9SzktbgMGFa0/Y4jLQ/sWG/GGeCKjuu3wJuA6zOI+FwaTXTsOA2CPRJenqC/3kI7bFRoBtgy0wmkD4x3etG2O4MXbP/7bxP005uAVYu2t+kA7yDZc0Q5JxdttzP4AAJwToL+eTGDKS82sBpwXkoRf6tou53BQyTes+v0yR4sXvrg9CIEDgBeTiHiE4u22el8Eop3NnBI0bYWDhYw/tYUIv5u0TY7nQs2V3NunT74OM1IBTpQAUYAP8SGJEk4i8E6bHGaBrY54cI6fe8m3NEoHuDTJA/T8xs8cZqTE8BYLEpMLX7pfa4OWPaHeq5qvVyL7yV2GgTYgPqhkk8p2s4BAxYc7ImEIr4H2Lhom52BCbAt8FidPtb89J+dBjCB2qkpynkO2K1om52BRXd394exIOu18OXLrADrAfcmFPEc4NNF2+wMDLCNNovr9KnTirZzwIPtAEkT+fJHwIii7XbaE2AV4IIE/eg83A8/H4C1U4r4ZorI/Oa0Ndjcyj0J+s8VwPCi7e0osDtxkovfyxTgw0Xb7bQHwCFYxJd63A6MKdrejgRYl+TPxGDJlU8HRhVtu1MMmN/9+Qn7y4PAOkXb3NEA41KKGOAuYPuibXdaCxa76uGEfeR/wPiibR4UAOuWSqU0w2mwWerj8WebjgeLnvF96s8yl4v3zUXbPajAJrayJBr/B7Bj0fY7zQF4NzYUTsr9+J23GIDVgRsziHg+to9zbNFtcPIBm+T8OfVzFJVzPbBW0bYParBg8vV2kFTjUeBjRbfByQ4W8uYw4NmU3/1PcH+B9gDoAk4l+XbESq4Gtiu6HU46sPBMSSJFljML+EzRtjsxYGt9szKKeD7wM/x5qO3Bgqv/nnTDZbDVC/+hbmeAHYBJGUUM5tz+HWDtotvi9AcLT3wW8EbK77Q7Os8dNAYC2OL9rxoQMcALWBhcF3LBABsCp1F/51AcjwLvK7oNTgaAA6mffLkeLwInAxsU3Z7BBrAJFmopi3AXAGcwGGI1dzLYsOuPDYqYqBOdDWxddJs6HWBHbMfQ7Izf1d+AnYpuh5MjwMexaIKNsgDbrfIBfBkiN7C0tB/HgsalnZzq5THgIDzgYWeCPRufSvZf9koewtwzPaRPRoAtsEnDpCGU4ngR+BqdmpfI6Q+wOXARsKQh+fYxB4touD+wRtHta3ewXWWHYXfbtLmyynkZE7/vIBqMAG/HnDiWNdCJKnkJ+H13d/e+uJiXg4l2fyxtbJZJqXJeAE7C4zM7kgTsgQk567NXNaYBf8LiXW9UdDtbCeYdtxlwZHRtGxUt2K6ho4E1i25fkXicnyoAu0j6kqSPScp70X+epEck/TN6PRxCmJFzHYUCrC9pO0nvkrSHpK0kNRpMoSTpDkkXSLohhLCgwfIGPC7gOgCbSTpM0sGSmuVaOVPSY5Luk3S/pP9JmhpCWNik+nIFGC27NhMl7Ry9tpC0Wk5VvCLpGkkXhRDuzanMjsAFnBAs68M+MjG/Q9KwJla3WNJLkp6SifkxSc9E780MISxuYt1VwcIRrSnpTaVSadMhQ4ZsKWkbSW+RtL6kPAMkLJJ0t6TLJF3faSOUvHABZwALyXOgpI/KOm+rmCPpVUnTJE2NXtNkd6iZkt6QDc8Xyn4EuiUtk9QTvYjKCZK6JA2JXsMljZQNccfI7pxrSVpH0gaSNoxe60laW/k/UvSyWNIkSdfJRPt4k+rpGFzADRANHXeXtJ+k98o6eZGUZCLofS2RtFQm5JJMxJKJd6hsFDFc0giZgEdGfw9poc0zJT0g6WZJt0l6IoRA7VOcXlzAOQGsJhta7yNpT0keVymeeZKelHSXpNslPRBCeKVYkwYuLuAmEN2Zt5O0l0zMEyUNVs+gV2SCfUDSPZL+K+mFEEJPrZOcZLiAWwAWGGBH2XLKLpI2k7RqkTY1gZLs+fw52cTbJNlS2TMhhNeLNKyTcQG3GCzHzvqyddEdJW0vW3LZUNLoAk1LyjJJs2Qz4pMlPSHpcdmM+dQQwqwCbRt0uIDbAGwn0zhJG8vuzptL2kQm6rUljZVNMLWCkmwWe46k1yS9LGmKpGclTV66dOkLw4cPf1nSLB8GF48LuI3BAs+vLlvOWU92515fJva1o8/GypZ1VpLNIA+TzTL3frfIRLk0ei2UtEAm0NmSXpc0I3pNlz2zzojenxNCWNbkZjoN8P8BWKdafoMFcqYAAAAASUVORK5CYII=" alt="Kickon Group"><div class="doc-tag">Project .5 &middot; Live Dashboard</div></div>
 <div class="content" id="view"></div>
-<div class="footer"><div>Kickon Group &middot; Project .5 &middot; Confidential</div><div class="r">kickongroup.com</div></div>
+<div class="footer"><div>Kickon Group &middot; Project .5 &middot; Confidential &middot; Encrypted</div><div class="r">kickongroup.com</div></div>
 </div>
-
 <script>
-// ---------- seed baseline (Phase 1, FY26 YTD) ----------
 var VENUES=["Pincho Disco","The Collective","Cinder","Watermark","Ember"];
-var SEED={
- "Pincho Disco":{dpc:2.81,alc:2.65,spc:48.87,avg:17.39,covers:29996,mix:{cocktails:49.5,wine:22.9,beer:14.4,spirits:7.3,nonalc:5.8}},
- "The Collective":{dpc:1.77,alc:1.40,spc:17.60,avg:9.96,covers:95667,mix:{cocktails:20.5,wine:18.0,beer:29.1,spirits:11.5,nonalc:20.8}},
- "Cinder":{dpc:1.64,alc:1.48,spc:31.89,avg:19.50,covers:18471,mix:{cocktails:18.5,wine:41.9,beer:24.1,spirits:6.1,nonalc:9.3}},
- "Watermark":{dpc:2.03,alc:1.56,spc:19.32,avg:9.51,covers:123572,mix:{cocktails:6.9,wine:11.1,beer:37.2,spirits:21.7,nonalc:23.0}},
- "Ember":{dpc:1.61,alc:1.49,spc:48.43,avg:30.08,covers:10576,mix:{cocktails:24.7,wine:45.9,beer:13.7,spirits:8.4,nonalc:7.3}}
-};
-var GROUP_BASE=1.98, UPLIFT=0.5;
+var UPLIFT=0.5, GP=0.70;
 var CATS=["cocktails","wine","beer","spirits","nonalc"];
 var CATCOL={cocktails:"#2B5080",wine:"#4A8BC4",beer:"#1A3655",spirits:"#6b9bd1",nonalc:"#94A3B8"};
 var VCOL={"Pincho Disco":"#2B5080","The Collective":"#4A8BC4","Cinder":"#1A3655","Watermark":"#6b9bd1","Ember":"#b25b00"};
+var DATA=null, PASS=null, view="loading", BLOB=null, PENDING=null;
 
-// ---------- storage ----------
-function freshData(){var d={venues:{}};VENUES.forEach(function(v){var s=SEED[v];d.venues[v]={baseline:s,target:+(s.dpc+UPLIFT).toFixed(2),weeks:[{label:"Baseline",date:"FY26 YTD",dpc:s.dpc,alc:s.alc,spc:s.spc,avg:s.avg,mix:s.mix,covers:s.covers}]};});return d;}
-function load(){try{var r=localStorage.getItem("project5");if(r)return JSON.parse(r);}catch(e){}return freshData();}
-function save(d){try{localStorage.setItem("project5",JSON.stringify(d));}catch(e){}}
-var DATA=load();
+// ---- crypto (AES-256-GCM + PBKDF2) ----
+function b64(b){var s="";for(var i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);return btoa(s);}
+function ub64(t){var s=atob(t);var a=new Uint8Array(s.length);for(var i=0;i<s.length;i++)a[i]=s.charCodeAt(i);return a;}
+function dk(pass,salt){return crypto.subtle.importKey("raw",new TextEncoder().encode(pass),"PBKDF2",false,["deriveKey"]).then(function(km){return crypto.subtle.deriveKey({name:"PBKDF2",salt:salt,iterations:250000,hash:"SHA-256"},km,{name:"AES-GCM",length:256},false,["encrypt","decrypt"]);});}
+function encryptData(obj,pass){var salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));return dk(pass,salt).then(function(k){return crypto.subtle.encrypt({name:"AES-GCM",iv:iv},k,new TextEncoder().encode(JSON.stringify(obj)));}).then(function(ct){return {v:1,salt:b64(salt),iv:b64(iv),ct:b64(new Uint8Array(ct))};});}
+function decryptData(blob,pass){return dk(pass,ub64(blob.salt)).then(function(k){return crypto.subtle.decrypt({name:"AES-GCM",iv:ub64(blob.iv)},k,ub64(blob.ct));}).then(function(pt){return JSON.parse(new TextDecoder().decode(pt));});}
 
-// ---------- CSV + classify (verified against the Phase 1 baseline) ----------
+// ---- CSV + classify (verified to match the baseline) ----
 function parseCSV(text){text=text.replace(/^﻿/,"");var nl=text.indexOf("\n");var fl=text.slice(0,nl<0?text.length:nl);var delim=(fl.split("\t").length>fl.split(",").length)?"\t":",";var rows=[],field="",row=[],inq=false;for(var i=0;i<text.length;i++){var c=text[i];if(inq){if(c==='"'){if(text[i+1]==='"'){field+='"';i++;}else inq=false;}else field+=c;}else{if(c==='"')inq=true;else if(c===delim){row.push(field);field="";}else if(c==="\n"){row.push(field);rows.push(row);row=[];field="";}else if(c==="\r"){}else field+=c;}}if(field.length||row.length){row.push(field);rows.push(row);}return rows;}
 function classify(name,ag,sgc){var nm=(name||"").toLowerCase(),agl=(ag||"").toLowerCase(),t=agl+" "+(sgc||"").toLowerCase();
  if(t.indexOf("discount")>=0||t.indexOf("promo")>=0||agl.indexOf("adj")===0)return"discount";
@@ -114,103 +88,84 @@ function computeLS(text){var rows=parseCSV(text),h=rows[0];var iN=idx(h,"item na
 function computeCovers(text){var rows=parseCSV(text),h=rows[0];var iS=idx(h,"reservation status"),iC=idx(h,"booked covers");var cov=0;for(var r=1;r<rows.length;r++){var row=rows[r];if(row.length<=Math.max(iS,iC))continue;if((row[iS]||"").toLowerCase().indexOf("complete")>=0)cov+=parseFloat(row[iC])||0;}return cov;}
 function venueFromName(s){s=(s||"").toLowerCase();if(s.indexOf("pincho")>=0)return"Pincho Disco";if(s.indexOf("collective")>=0)return"The Collective";if(s.indexOf("cinder")>=0)return"Cinder";if(s.indexOf("watermark")>=0)return"Watermark";if(s.indexOf("ember")>=0)return"Ember";return null;}
 
-// ---------- helpers ----------
-function statusOf(cur,base,target){var d=cur-base;if(cur>=target-0.05)return["On / above target","green"];if(d>=0.20)return["Climbing","amber"];if(d>=0.05)return["Early lift","amber"];if(d>-0.05)return["On baseline","grey"];return["Below baseline","red"];}
-function cur(v){var w=DATA.venues[v].weeks;return w[w.length-1];}
+// ---- helpers ----
+function statusOf(c,b,t){var d=c-b;if(c>=t-0.05)return["On / above target","green"];if(d>=0.20)return["Climbing","amber"];if(d>=0.05)return["Early lift","amber"];if(d>-0.05)return["On baseline","grey"];return["Below baseline","red"];}
+function curw(v){var w=DATA.venues[v].weeks;return w[w.length-1];}
 function esc(s){return(""+s).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
-
-// ---------- views ----------
-var view="home";
 function go(v){view=v;render();window.scrollTo(0,0);}
 
-function homeView(){return '<div class="tag">Project .5 &middot; +0.5 Beverage Program</div><div class="divider"></div>'
- +'<h1>Live Dashboard</h1><div class="sub">Drinks per customer across all participating venues, tracked against the +0.5 target.</div>'
- +'<div class="choices">'
- +'<div class="choice" onclick="go(\'update\')"><div class="ic">&#128228;</div><h3>Update with this week&#39;s data</h3><p>For Mary &mdash; upload the weekly venue exports and the dashboard recalculates itself. Step-by-step instructions inside.</p><div style="margin-top:14px"><span class="btn">Update data</span></div></div>'
- +'<div class="choice" onclick="go(\'dashboard\')" style="border-top-color:var(--steel)"><div class="ic">&#128202;</div><h3>View the dashboard</h3><p>See the full stats &mdash; drinks per cover, trend vs target, sales mix and the weekly history for every venue.</p><div style="margin-top:14px"><span class="btn alt">View dashboard</span></div></div>'
- +'</div>'
- +'<div class="note"><b>How it stays current:</b> every Monday Mary uploads the week&#39;s exports through the Update screen; the dashboard parses them in your browser, recomputes drinks per cover (same method as the baseline) and saves the week. Nothing leaves this page.</div>';}
+// ---- secure boot ----
+function boot(){
+ fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+   if(d&&d.ct&&d.salt){BLOB=d;view="locked";render();}
+   else if(d&&d.venues){DATA=d;view="home";render();}
+   else {view="nodata";render();}
+ }).catch(function(){view="nodata";render();});
+}
+function unlock(){var p=document.getElementById("pw").value;var e=document.getElementById("lockmsg");
+ if(!p){e.innerHTML='<div class="msg warn">Enter the password.</div>';return;}
+ decryptData(BLOB,p).then(function(d){DATA=d;PASS=p;view="home";render();}).catch(function(){e.innerHTML='<div class="msg err">Wrong password - try again.</div>';});}
+function importData(inp){if(!inp.files.length)return;var rd=new FileReader();rd.onload=function(){try{var d=JSON.parse(rd.result);if(d.ct&&d.salt){BLOB=d;view="locked";render();return;}DATA=d;view="home";render();}catch(e){alert("Could not read that file.");}};rd.readAsText(inp.files[0]);}
 
-function updateView(){return '<div class="navrow"><span class="link" onclick="go(\'home\')">&#8592; Home</span><span class="link" onclick="go(\'dashboard\')">View dashboard &#8594;</span></div>'
- +'<div class="tag">Weekly update</div><div class="divider"></div><h1>Update the data</h1>'
- +'<div class="sub">For Mary &mdash; about 5 minutes every Monday.</div>'
- +'<div class="panel"><h2 style="margin-top:0">Step 1 &middot; Export from each venue</h2><div class="divider"></div>'
- +'<ol class="steps">'
- +'<li><b>Lightspeed (drinks):</b> Back Office &rarr; for each venue (and the Cinder and Ember locations) &rarr; <b>Reports &rarr; Product mix report</b> &rarr; set the date range to <b>last Monday&ndash;Sunday</b> &rarr; <b>Export &rarr; CSV</b>.</li>'
- +'<li><b>SevenRooms (covers):</b> Reporting &rarr; <b>Reservations Export</b> &rarr; pick the venue &rarr; set <b>Reservation Date</b> to the same week &rarr; status <b>Complete</b> &rarr; <b>Export &rarr; CSV</b>.</li>'
- +'<li>You&#39;ll have up to <b>2 files per venue</b>. Filenames already contain the venue name &mdash; no need to rename.</li>'
- +'</ol></div>'
- +'<div class="panel"><h2 style="margin-top:0">Step 2 &middot; Upload them here</h2><div class="divider"></div>'
- +'<div class="field"><label>Week ending (Sunday)</label><input type="date" id="weeklabel"></div>'
- +'<div class="drop">Select every CSV for the week (drinks + covers, all venues at once).<br><input type="file" id="files" multiple accept=".csv,.txt"></div>'
- +'<div style="margin-top:12px"><span class="btn" onclick="processFiles()">Calculate</span></div>'
- +'<div id="preview"></div></div>'
- +'<div class="panel"><h2 style="margin-top:0">Step 3 &middot; Publish to the team</h2><div class="divider"></div><p style="font-size:12px">Once you have published the week above, download the data file and upload it to the dashboard&#39;+"&#39;"+'s GitHub repo (replace <b>data.json</b>). The live site refreshes within about a minute, so everyone sees the update.</p><div style="margin-top:10px"><span class="btn" onclick="downloadData()">Download data.json</span></div></div>'+'<div class="panel"><h2 style="margin-top:0">Backup (optional)</h2><div class="divider"></div>'
- +'<p style="font-size:12px">The data is saved in this browser. For safety you can keep a backup file.</p>'
- +'<div style="margin-top:10px"><span class="btn alt" onclick="downloadBackup()">Download backup</span> <input type="file" id="restore" accept=".json" style="margin-left:8px" onchange="restoreBackup(this)"></div></div>';}
-
+// ---- update flow ----
 function processFiles(){var inp=document.getElementById("files");var lab=document.getElementById("weeklabel").value;var pv=document.getElementById("preview");
  if(!inp.files.length){pv.innerHTML='<div class="msg warn">Choose the CSV files first.</div>';return;}
  if(!lab){pv.innerHTML='<div class="msg warn">Set the week-ending date first.</div>';return;}
  var files=[].slice.call(inp.files);var done=0;var ls={},sr={};
  files.forEach(function(f){var rd=new FileReader();rd.onload=function(){var text=rd.result;var rows=parseCSV(text);var h=(rows[0]||[]).map(function(x){return(x||"").trim().toLowerCase();});var isLS=h.indexOf("total quantity")>=0&&h.indexOf("accounting group")>=0;var isSR=h.indexOf("booked covers")>=0&&h.indexOf("venue name")>=0;if(isLS){var v=venueFromName(f.name);if(v)ls[v]=text;}else if(isSR){var iv=h.indexOf("venue name");var vn="";for(var r=1;r<rows.length;r++){if(rows[r][iv]){vn=rows[r][iv];break;}}var v2=venueFromName(vn)||venueFromName(f.name);if(v2)sr[v2]=text;}done++;if(done===files.length)finishProcess(ls,sr,lab,pv);};rd.readAsText(f);});}
-
 function finishProcess(ls,sr,lab,pv){var res=[];VENUES.forEach(function(v){if(ls[v]&&sr[v]){var L=computeLS(ls[v]);var cov=computeCovers(sr[v]);if(cov>0)res.push({venue:v,dpc:+(L.du/cov).toFixed(2),alc:+(L.alc/cov).toFixed(2),spc:+(L.net/cov).toFixed(2),avg:+(L.net/L.du).toFixed(2),mix:L.mix,covers:Math.round(cov)});}});
- if(!res.length){pv.innerHTML='<div class="msg err">No venue had both a drinks file and a covers file. Check you exported both per venue.</div>';return;}
- window._pending={rows:res,label:lab};var html='<div class="msg ok">Calculated '+res.length+' venue(s) for week ending '+esc(lab)+'. Review, then publish.</div>';
+ if(!res.length){pv.innerHTML='<div class="msg err">No venue had both a drinks file and a covers file. Check both were exported per venue.</div>';return;}
+ PENDING={rows:res,label:lab};var html='<div class="msg ok">Calculated '+res.length+' venue(s) for week ending '+esc(lab)+'. Review, then add the week.</div>';
  html+='<table><thead><tr><th>Venue</th><th>Covers</th><th>Drinks/cover</th><th>Alc/cover</th><th>$/cover</th></tr></thead><tbody>';
  res.forEach(function(x){html+='<tr><td><b>'+x.venue+'</b></td><td>'+x.covers.toLocaleString()+'</td><td>'+x.dpc.toFixed(2)+'</td><td>'+x.alc.toFixed(2)+'</td><td>$'+x.spc.toFixed(2)+'</td></tr>';});
- html+='</tbody></table><div style="margin-top:12px"><span class="btn" onclick="publish()">Publish this week</span></div>';pv.innerHTML=html;}
+ html+='</tbody></table><div style="margin-top:12px"><span class="btn" onclick="addWeek()">Add this week</span></div>';pv.innerHTML=html;}
+function addWeek(){if(!PENDING)return;PENDING.rows.forEach(function(x){DATA.venues[x.venue].weeks.push({label:PENDING.label,date:PENDING.label,dpc:x.dpc,alc:x.alc,spc:x.spc,avg:x.avg,mix:x.mix,covers:x.covers});});PENDING=null;go("dashboard");}
+function publishEncrypted(){var m=document.getElementById("pubmsg");var p=PASS;
+ if(!p){var a=document.getElementById("pw1").value,b=document.getElementById("pw2").value;if(a.length<8){m.innerHTML='<div class="msg warn">Choose a password of at least 8 characters.</div>';return;}if(a!==b){m.innerHTML='<div class="msg warn">Passwords do not match.</div>';return;}p=a;}
+ m.innerHTML='<div class="msg">Encrypting...</div>';
+ encryptData(DATA,p).then(function(blob){PASS=p;var bl=new Blob([JSON.stringify(blob)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download="data.json";a.click();m.innerHTML='<div class="msg ok">Encrypted data.json downloaded. Upload it to the GitHub repo (replace data.json) to publish.</div>';}).catch(function(){m.innerHTML='<div class="msg err">Something went wrong encrypting.</div>';});}
 
-function publish(){var p=window._pending;if(!p)return;p.rows.forEach(function(x){DATA.venues[x.venue].weeks.push({label:p.label,date:p.label,dpc:x.dpc,alc:x.alc,spc:x.spc,avg:x.avg,mix:x.mix,covers:x.covers});});save(DATA);window._pending=null;go("dashboard");}
-
-function downloadData(){var blob=new Blob([JSON.stringify(DATA,null,1)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="data.json";a.click();}
-function downloadBackup(){var blob=new Blob([JSON.stringify(DATA)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="project5-dashboard-data.json";a.click();}
-function restoreBackup(inp){if(!inp.files.length)return;var rd=new FileReader();rd.onload=function(){try{DATA=JSON.parse(rd.result);save(DATA);alert("Backup restored.");go("dashboard");}catch(e){alert("Could not read that file.");}};rd.readAsText(inp.files[0]);}
-
-// ---------- dashboard ----------
-function svgTrend(){var W=940,H=300,pL=46,pR=150,pT=18,pB=34,ymin=1.0,ymax=3.6;
- var maxw=0;VENUES.forEach(function(v){maxw=Math.max(maxw,DATA.venues[v].weeks.length-1);});if(maxw<1)maxw=1;
+// ---- views ----
+function lockedView(){return '<div class="lock"><div class="ic">&#128274;</div><h2>Project .5 Dashboard</h2><div class="sub">This dashboard is encrypted. Enter the password to view.</div><input type="password" id="pw" placeholder="Password" onkeydown="if(event.key===\'Enter\')unlock()"><div style="margin-top:14px"><span class="btn" onclick="unlock()">Unlock</span></div><div id="lockmsg"></div></div>';}
+function nodataView(){return '<div class="tag">Project .5</div><div class="divider"></div><h1>Set up the dashboard</h1><div class="sub">No published data yet. If you are setting this up, import the baseline file, then publish with a password.</div>'
+ +'<div class="panel"><h2 style="margin-top:0">Import baseline / backup</h2><div class="divider"></div><p style="font-size:12px">Load the <b>data.seed.json</b> file (one-time, on your own machine) to populate the baseline.</p><div style="margin-top:10px"><input type="file" accept=".json" onchange="importData(this)"></div></div>';}
+function homeView(){return '<div class="tag">Project .5 &middot; +0.5 Beverage Program</div><div class="divider"></div><h1>Live Dashboard</h1><div class="sub">Drinks per customer across all participating venues, tracked against the +0.5 target.</div>'
+ +'<div class="choices"><div class="choice" onclick="go(\'update\')"><div class="ic">&#128228;</div><h3>Update with this week&#39;s data</h3><p>For Mary &mdash; upload the weekly venue exports; the page recalculates, then you publish an encrypted update. Instructions inside.</p><div style="margin-top:14px"><span class="btn">Update data</span></div></div>'
+ +'<div class="choice" onclick="go(\'dashboard\')" style="border-top-color:var(--steel)"><div class="ic">&#128202;</div><h3>View the dashboard</h3><p>Full stats &mdash; drinks per cover, trend vs target, sales mix and weekly history for every venue.</p><div style="margin-top:14px"><span class="btn alt">View dashboard</span></div></div></div>'
+ +'<div class="note"><b>Encrypted &amp; private:</b> the published data file is AES-256 encrypted - only this password opens it. The page itself holds no figures.</div>';}
+function updateView(){var setpw=PASS?'<p style="font-size:12px">Using the password you unlocked with.</p>':'<div class="field"><label>Set a password</label><input type="password" id="pw1" placeholder="At least 8 characters"></div><div class="field"><label>Confirm password</label><input type="password" id="pw2"></div>';
+ return '<div class="navrow"><span class="link" onclick="go(\'home\')">&#8592; Home</span><span class="link" onclick="go(\'dashboard\')">View dashboard &#8594;</span></div><div class="tag">Weekly update</div><div class="divider"></div><h1>Update the data</h1><div class="sub">For Mary &mdash; about 5 minutes every Monday.</div>'
+ +'<div class="panel"><h2 style="margin-top:0">Step 1 &middot; Export from each venue</h2><div class="divider"></div><ol class="steps"><li><b>Lightspeed (drinks):</b> Back Office &rarr; each venue (and the Cinder &amp; Ember locations) &rarr; <b>Reports &rarr; Product mix report</b> &rarr; date range <b>last Mon&ndash;Sun</b> &rarr; <b>Export &rarr; CSV</b>.</li><li><b>SevenRooms (covers):</b> Reporting &rarr; <b>Reservations Export</b> &rarr; each venue &rarr; same week &rarr; status <b>Complete</b> &rarr; <b>Export &rarr; CSV</b>.</li></ol></div>'
+ +'<div class="panel"><h2 style="margin-top:0">Step 2 &middot; Upload &amp; calculate</h2><div class="divider"></div><div class="field"><label>Week ending (Sunday)</label><input type="date" id="weeklabel"></div><div class="drop">Select every CSV for the week (all venues).<br><input type="file" id="files" multiple accept=".csv,.txt"></div><div style="margin-top:12px"><span class="btn" onclick="processFiles()">Calculate</span></div><div id="preview"></div></div>'
+ +'<div class="panel"><h2 style="margin-top:0">Step 3 &middot; Publish (encrypted)</h2><div class="divider"></div><p style="font-size:12px">Encrypt the updated data and download <b>data.json</b>, then upload it to the GitHub repo (replace the old one). The live site refreshes within ~a minute.</p>'+setpw+'<div style="margin-top:10px"><span class="btn" onclick="publishEncrypted()">Encrypt &amp; download data.json</span></div><div id="pubmsg"></div></div>';}
+function svgTrend(){var W=940,H=300,pL=46,pR=150,pT=18,pB=34,ymin=1.0,ymax=3.6;var maxw=0;VENUES.forEach(function(v){maxw=Math.max(maxw,DATA.venues[v].weeks.length-1);});if(maxw<1)maxw=1;
  function X(i){return pL+i/maxw*(W-pL-pR);}function Y(val){return H-pB-(val-ymin)/(ymax-ymin)*(H-pT-pB);}
  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,Arial,sans-serif">';
  for(var g=ymin;g<=ymax+1e-9;g+=0.5){var y=Y(g);s+='<line x1="'+pL+'" y1="'+y.toFixed(1)+'" x2="'+(W-pR)+'" y2="'+y.toFixed(1)+'" stroke="#e2e8f0"/><text x="'+(pL-6)+'" y="'+(y+3).toFixed(1)+'" font-size="9" fill="#94A3B8" text-anchor="end">'+g.toFixed(1)+'</text>';}
  for(var i=0;i<=maxw;i++){s+='<text x="'+X(i).toFixed(1)+'" y="'+(H-pB+15)+'" font-size="9" fill="#94A3B8" text-anchor="middle">'+(i===0?"Base":("W"+i))+'</text>';}
- var ly=pT+4;VENUES.forEach(function(v){var c=VCOL[v];var w=DATA.venues[v].weeks;var pts=[];for(var i=0;i<w.length;i++){pts.push(X(i).toFixed(1)+","+Y(w[i].dpc).toFixed(1));}
-  if(w.length>1)s+='<polyline points="'+pts.join(" ")+'" fill="none" stroke="'+c+'" stroke-width="2.5"/>';
-  for(var i2=0;i2<w.length;i2++){s+='<circle cx="'+X(i2).toFixed(1)+'" cy="'+Y(w[i2].dpc).toFixed(1)+'" r="3.2" fill="'+c+'"/>';}
-  s+='<circle cx="'+(W-pR+14)+'" cy="'+ly+'" r="4" fill="'+c+'"/><text x="'+(W-pR+22)+'" y="'+(ly+4)+'" font-size="10" fill="#334155">'+v+'</text>';ly+=19;});
- s+='</svg>';return s;}
-
-function mixBlock(){var h='<div class="legend">';CATS.forEach(function(c){h+='<span><span class="dot" style="background:'+CATCOL[c]+'"></span>'+c+'</span>';});h+='</div>';
- VENUES.forEach(function(v){var m=cur(v).mix;h+='<div class="mixrow"><div class="mixname">'+v+'</div><div class="mixbar">';CATS.forEach(function(c){var pc=m[c]||0;if(pc>0)h+='<div title="'+c+' '+pc+'%" style="width:'+pc+'%;background:'+CATCOL[c]+'"></div>';});h+='</div></div>';});return h;}
-
+ var ly=pT+4;VENUES.forEach(function(v){var c=VCOL[v];var w=DATA.venues[v].weeks;var pts=[];for(var i=0;i<w.length;i++){pts.push(X(i).toFixed(1)+","+Y(w[i].dpc).toFixed(1));}if(w.length>1)s+='<polyline points="'+pts.join(" ")+'" fill="none" stroke="'+c+'" stroke-width="2.5"/>';for(var i2=0;i2<w.length;i2++){s+='<circle cx="'+X(i2).toFixed(1)+'" cy="'+Y(w[i2].dpc).toFixed(1)+'" r="3.2" fill="'+c+'"/>';}s+='<circle cx="'+(W-pR+14)+'" cy="'+ly+'" r="4" fill="'+c+'"/><text x="'+(W-pR+22)+'" y="'+(ly+4)+'" font-size="10" fill="#334155">'+v+'</text>';ly+=19;});
+ return s+'</svg>';}
+function mixBlock(){var h='<div class="legend">';CATS.forEach(function(c){h+='<span><span class="dot" style="background:'+CATCOL[c]+'"></span>'+c+'</span>';});h+='</div>';VENUES.forEach(function(v){var m=curw(v).mix;h+='<div class="mixrow"><div class="mixname">'+v+'</div><div class="mixbar">';CATS.forEach(function(c){var pc=m[c]||0;if(pc>0)h+='<div title="'+c+' '+pc+'%" style="width:'+pc+'%;background:'+CATCOL[c]+'"></div>';});h+='</div></div>';});return h;}
 function dashboardView(){
- var gCov=0,gW=0;VENUES.forEach(function(v){var c=cur(v);gCov+=c.covers||0;gW+=(c.dpc*(c.covers||0));});var gdpc=gCov>0?gW/gCov:GROUP_BASE;
- var anyWeek=DATA.venues[VENUES[0]].weeks.length>1;
- var lastLabel=anyWeek?cur(VENUES[0]).label:"Baseline only";
- var h='<div class="navrow"><span class="link" onclick="go(\'home\')">&#8592; Home</span><span class="link" onclick="go(\'update\')">Update data &#8594;</span></div>';
- h+='<div class="tag">Project .5 &middot; All venues</div><div class="divider"></div><h1>Dashboard</h1>';
+ var gBaseCov=0,gBaseW=0,prize=0;VENUES.forEach(function(v){var b=DATA.venues[v].baseline;gBaseCov+=b.covers||0;gBaseW+=b.dpc*(b.covers||0);prize+=(b.covers||0)*UPLIFT*(b.avg||0);});var gBase=gBaseCov?gBaseW/gBaseCov:0;
+ var gCov=0,gW=0;VENUES.forEach(function(v){var c=curw(v);gCov+=c.covers||0;gW+=c.dpc*(c.covers||0);});var gdpc=gCov?gW/gCov:gBase;
+ var anyWeek=DATA.venues[VENUES[0]].weeks.length>1;var lastLabel=anyWeek?curw(VENUES[0]).label:"Baseline only";
+ var h='<div class="navrow"><span class="link" onclick="go(\'home\')">&#8592; Home</span><span class="link" onclick="go(\'update\')">Update data &#8594;</span></div><div class="tag">Project .5 &middot; All venues</div><div class="divider"></div><h1>Dashboard</h1>';
  h+='<div class="meta">Latest: '+esc(lastLabel)+(anyWeek?'':' &middot; upload a week to start the trend')+'</div>';
- h+='<div class="band"><div><div class="lbl">Group drinks / cover</div><div class="big">'+gdpc.toFixed(2)+'</div><div class="s">baseline '+GROUP_BASE.toFixed(2)+' &middot; target '+(GROUP_BASE+UPLIFT).toFixed(2)+'</div></div>'
-  +'<div><div class="lbl">vs baseline</div><div class="big">'+(gdpc-GROUP_BASE>=0?"+":"")+(gdpc-GROUP_BASE).toFixed(2)+'</div><div class="s">of the +0.50 goal</div></div>'
-  +'<div style="flex:1;min-width:200px"><div class="lbl">The goal</div><div class="s" style="font-size:11px;color:#fff">+0.5 drinks per customer &asymp; $1.66M gross / $1.16M margin a year across the five venues.</div></div></div>';
- // venue table
+ h+='<div class="band"><div><div class="lbl">Group drinks / cover</div><div class="big">'+gdpc.toFixed(2)+'</div><div class="s">baseline '+gBase.toFixed(2)+' &middot; target '+(gBase+UPLIFT).toFixed(2)+'</div></div>'
+  +'<div><div class="lbl">vs baseline</div><div class="big">'+(gdpc-gBase>=0?"+":"")+(gdpc-gBase).toFixed(2)+'</div><div class="s">of the +0.50 goal</div></div>'
+  +'<div style="flex:1;min-width:200px"><div class="lbl">The goal</div><div class="s" style="font-size:11px;color:#fff">+0.5 drinks per customer &asymp; $'+(prize/1e6).toFixed(2)+'M extra gross / yr across the five venues.</div></div></div>';
  h+='<h2>By venue</h2><div class="divider"></div><table><thead><tr><th>Venue</th><th>Drinks/cover</th><th>Baseline</th><th>Target</th><th>&Delta;</th><th>Alc/cover</th><th>$/cover</th><th>Avg drink</th><th>Covers</th><th>Status</th></tr></thead><tbody>';
- VENUES.forEach(function(v){var c=cur(v),b=DATA.venues[v].baseline,t=DATA.venues[v].target;var st=(DATA.venues[v].weeks.length<=1)?["Baseline set","grey"]:statusOf(c.dpc,b.dpc,t);var d=c.dpc-b.dpc;
-  h+='<tr><td><b>'+v+'</b></td><td><b>'+c.dpc.toFixed(2)+'</b></td><td>'+b.dpc.toFixed(2)+'</td><td>'+t.toFixed(2)+'</td><td>'+(d>=0?"+":"")+d.toFixed(2)+'</td><td>'+c.alc.toFixed(2)+'</td><td>$'+c.spc.toFixed(2)+'</td><td>$'+c.avg.toFixed(2)+'</td><td>'+(c.covers||0).toLocaleString()+'</td><td><span class="pill '+st[1]+'">'+st[0]+'</span></td></tr>';});
+ VENUES.forEach(function(v){var c=curw(v),b=DATA.venues[v].baseline,t=DATA.venues[v].target;var st=(DATA.venues[v].weeks.length<=1)?["Baseline set","grey"]:statusOf(c.dpc,b.dpc,t);var d=c.dpc-b.dpc;h+='<tr><td><b>'+v+'</b></td><td><b>'+c.dpc.toFixed(2)+'</b></td><td>'+b.dpc.toFixed(2)+'</td><td>'+t.toFixed(2)+'</td><td>'+(d>=0?"+":"")+d.toFixed(2)+'</td><td>'+c.alc.toFixed(2)+'</td><td>$'+c.spc.toFixed(2)+'</td><td>$'+c.avg.toFixed(2)+'</td><td>'+(c.covers||0).toLocaleString()+'</td><td><span class="pill '+st[1]+'">'+st[0]+'</span></td></tr>';});
  h+='</tbody></table>';
- h+='<h2>Drinks per cover &mdash; trend vs target</h2><div class="divider"></div><div class="panel">'+svgTrend()+'<div class="note" style="margin-top:8px">Lines are weekly drinks per cover. Targets (baseline + 0.50) are in the venue table above. Watch margin/GP alongside any lift &mdash; a rise driven by discounting is not a win.</div></div>';
+ h+='<h2>Drinks per cover &mdash; trend vs target</h2><div class="divider"></div><div class="panel">'+svgTrend()+'<div class="note" style="margin-top:8px">Weekly drinks per cover; targets (baseline + 0.50) are in the table. Watch margin/GP alongside any lift - a rise driven by discounting is not a win.</div></div>';
  h+='<h2>Current sales mix</h2><div class="divider"></div><div class="panel">'+mixBlock()+'</div>';
- // history
  var maxw=0;VENUES.forEach(function(v){maxw=Math.max(maxw,DATA.venues[v].weeks.length);});
  h+='<h2>Weekly history</h2><div class="divider"></div><div class="panel"><table><thead><tr><th>Week</th>';VENUES.forEach(function(v){h+='<th>'+v+'</th>';});h+='</tr></thead><tbody>';
  for(var i=0;i<maxw;i++){var lbl=i===0?"Baseline":null;VENUES.forEach(function(v){var w=DATA.venues[v].weeks;if(i<w.length&&lbl===null)lbl=w[i].label;});h+='<tr><td><b>'+esc(lbl||("Week "+i))+'</b></td>';VENUES.forEach(function(v){var w=DATA.venues[v].weeks;h+='<td>'+(i<w.length?w[i].dpc.toFixed(2):"&ndash;")+'</td>';});h+='</tr>';}
- h+='</tbody></table></div>';
- h+='<div style="margin-top:14px"><span class="btn" onclick="go(\'update\')">Update with new data</span> <span class="btn alt" onclick="if(confirm(\'Reset to baseline only? This clears uploaded weeks.\')){DATA=freshData();save(DATA);go(\'dashboard\');}" style="margin-left:8px">Reset</span></div>';
+ h+='</tbody></table></div><div style="margin-top:14px"><span class="btn" onclick="go(\'update\')">Update with new data</span></div>';
  return h;}
-
-function render(){var el=document.getElementById("view");el.innerHTML=view==="update"?updateView():view==="dashboard"?dashboardView():homeView();}
-function boot(){try{fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){DATA=d;save(DATA);render();}).catch(function(){render();});}catch(e){render();}}
+function render(){var el=document.getElementById("view");el.innerHTML=view==="locked"?lockedView():view==="nodata"?nodataView():view==="update"?updateView():view==="dashboard"?dashboardView():view==="loading"?'<div class="sub" style="text-align:center;margin:60px">Loading...</div>':homeView();}
 boot();
 </script>
 </body></html>
