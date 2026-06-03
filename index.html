@@ -57,6 +57,8 @@ var CATS=["cocktails","wine","beer","spirits","nonalc"];
 var CATCOL={cocktails:"#2B5080",wine:"#4A8BC4",beer:"#1A3655",spirits:"#6b9bd1",nonalc:"#94A3B8"};
 var VCOL={"Pincho Disco":"#2B5080","The Collective":"#4A8BC4","Cinder":"#1A3655","Watermark":"#6b9bd1","Ember":"#b25b00"};
 var DATA=null, PASS=null, view="loading", BLOB=null, PENDING=null;
+// ---- cloud store (JSONBin): paste your Bin ID and an Access Key with "Bins Update" permission ----
+var BIN_ID="6a1f7616da38895dfe7e5e22", ACCESS_KEY="", API="https://api.jsonbin.io/v3/b/";
 
 // ---- crypto (AES-256-GCM + PBKDF2) ----
 function b64(b){var s="";for(var i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);return btoa(s);}
@@ -96,7 +98,9 @@ function go(v){view=v;render();window.scrollTo(0,0);}
 
 // ---- secure boot ----
 function boot(){
- fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+ if(!BIN_ID||BIN_ID.indexOf("REPLACE")>=0){view="nodata";render();return;}
+ fetch(API+BIN_ID+"/latest",{headers:{"X-Bin-Meta":"false"},cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+   if(d&&d.record)d=d.record;
    if(d&&d.ct&&d.salt){BLOB=d;view="locked";render();}
    else if(d&&d.venues){DATA=d;view="home";render();}
    else {view="nodata";render();}
@@ -122,22 +126,23 @@ function finishProcess(ls,sr,lab,pv){var res=[];VENUES.forEach(function(v){if(ls
 function addWeek(){if(!PENDING)return;PENDING.rows.forEach(function(x){DATA.venues[x.venue].weeks.push({label:PENDING.label,date:PENDING.label,dpc:x.dpc,alc:x.alc,spc:x.spc,avg:x.avg,disc:x.disc,mix:x.mix,covers:x.covers});});PENDING=null;go("dashboard");}
 function publishEncrypted(){var m=document.getElementById("pubmsg");var p=PASS;
  if(!p){var a=document.getElementById("pw1").value,b=document.getElementById("pw2").value;if(a.length<8){m.innerHTML='<div class="msg warn">Choose a password of at least 8 characters.</div>';return;}if(a!==b){m.innerHTML='<div class="msg warn">Passwords do not match.</div>';return;}p=a;}
- m.innerHTML='<div class="msg">Encrypting...</div>';
- encryptData(DATA,p).then(function(blob){PASS=p;var bl=new Blob([JSON.stringify(blob)],{type:"application/json"});var a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download="data.json";a.click();m.innerHTML='<div class="msg ok">Encrypted data.json downloaded. Upload it to the GitHub repo (replace data.json) to publish.</div>';}).catch(function(){m.innerHTML='<div class="msg err">Something went wrong encrypting.</div>';});}
+ if(!BIN_ID||BIN_ID.indexOf("REPLACE")>=0){m.innerHTML='<div class="msg err">Live storage is not set up yet (BIN_ID in the page).</div>';return;}
+ m.innerHTML='<div class="msg">Encrypting and publishing...</div>';
+ encryptData(DATA,p).then(function(blob){PASS=p;return fetch(API+BIN_ID,{method:"PUT",headers:(function(){var hd={"Content-Type":"application/json","X-Bin-Versioning":"true"};if(ACCESS_KEY&&ACCESS_KEY.indexOf("REPLACE")<0)hd["X-Access-Key"]=ACCESS_KEY;return hd;})(),body:JSON.stringify(blob)});}).then(function(r){if(!r.ok)throw r.status;m.innerHTML='<div class="msg ok">Published. The live dashboard now shows this update - anyone with the password sees it on refresh.</div>';}).catch(function(e){m.innerHTML='<div class="msg err">Could not publish ('+(e||"error")+'). Check the connection and try again.</div>';});}
 
 // ---- views ----
 function lockedView(){return '<div class="lock"><div class="ic">&#128274;</div><h2>Project .5 Dashboard</h2><div class="sub">This dashboard is encrypted. Enter the password to view.</div><input type="password" id="pw" placeholder="Password" onkeydown="if(event.key===\'Enter\')unlock()"><div style="margin-top:14px"><span class="btn" onclick="unlock()">Unlock</span></div><div id="lockmsg"></div><div style="margin-top:18px;font-size:10.5px;color:var(--grey)">Setting up or replacing the baseline? <label class="link" style="cursor:pointer">import a data file<input type="file" accept=".json" style="display:none" onchange="importData(this)"></label></div></div>';}
-function nodataView(){return '<div class="tag">Project .5</div><div class="divider"></div><h1>Set up the dashboard</h1><div class="sub">No published data yet. If you are setting this up, import the baseline file, then publish with a password.</div>'
- +'<div class="panel"><h2 style="margin-top:0">Import baseline / backup</h2><div class="divider"></div><p style="font-size:12px">Load the <b>data.seed.json</b> file (one-time, on your own machine) to populate the baseline.</p><div style="margin-top:10px"><input type="file" accept=".json" onchange="importData(this)"></div></div>';}
+function nodataView(){return '<div class="tag">Project .5</div><div class="divider"></div><h1>Set up the dashboard</h1><div class="sub">No data published yet. Import the baseline once, set a password, then publish - it saves to the live store for everyone.</div>'
+ +'<div class="panel"><h2 style="margin-top:0">Import baseline</h2><div class="divider"></div><p style="font-size:12px">Load the <b>data.seed.json</b> file once to populate the baseline, then go to Update &rarr; Publish to push it live.</p><div style="margin-top:10px"><input type="file" accept=".json" onchange="importData(this)"></div></div>';}
 function homeView(){return '<div class="tag">Project .5 &middot; +0.5 Beverage Program</div><div class="divider"></div><h1>Live Dashboard</h1><div class="sub">Drinks per customer across all participating venues, tracked against the +0.5 target.</div>'
- +'<div class="choices"><div class="choice" onclick="go(\'update\')"><div class="ic">&#128228;</div><h3>Update with this week&#39;s data</h3><p>For Mary &mdash; upload the weekly venue exports; the page recalculates, then you publish an encrypted update. Instructions inside.</p><div style="margin-top:14px"><span class="btn">Update data</span></div></div>'
+ +'<div class="choices"><div class="choice" onclick="go(\'update\')"><div class="ic">&#128228;</div><h3>Update with this week&#39;s data</h3><p>For Mary &mdash; upload the weekly venue exports; the page recalculates, then you hit publish. It saves straight to the live dashboard. Instructions inside.</p><div style="margin-top:14px"><span class="btn">Update data</span></div></div>'
  +'<div class="choice" onclick="go(\'dashboard\')" style="border-top-color:var(--steel)"><div class="ic">&#128202;</div><h3>View the dashboard</h3><p>Full stats &mdash; drinks per cover, trend vs target, sales mix and weekly history for every venue.</p><div style="margin-top:14px"><span class="btn alt">View dashboard</span></div></div></div>'
- +'<div class="note"><b>Encrypted &amp; private:</b> the published data file is AES-256 encrypted - only this password opens it. The page itself holds no figures.</div>';}
+ +'<div class="note"><b>Encrypted &amp; private:</b> the data is AES-256 encrypted in the cloud store - only this password opens it. The page itself holds no figures.</div>';}
 function updateView(){var setpw=PASS?'<p style="font-size:12px">Using the password you unlocked with.</p>':'<div class="field"><label>Set a password</label><input type="password" id="pw1" placeholder="At least 8 characters"></div><div class="field"><label>Confirm password</label><input type="password" id="pw2"></div>';
  return '<div class="navrow"><span class="link" onclick="go(\'home\')">&#8592; Home</span><span class="link" onclick="go(\'dashboard\')">View dashboard &#8594;</span></div><div class="tag">Weekly update</div><div class="divider"></div><h1>Update the data</h1><div class="sub">For Mary &mdash; about 5 minutes every Monday.</div>'
  +'<div class="panel"><h2 style="margin-top:0">Step 1 &middot; Export from each venue</h2><div class="divider"></div><ol class="steps"><li><b>Lightspeed (drinks):</b> Back Office &rarr; each venue (and the Cinder &amp; Ember locations) &rarr; <b>Reports &rarr; Product mix report</b> &rarr; date range <b>last Mon&ndash;Sun</b> &rarr; <b>Export &rarr; CSV</b>.</li><li><b>SevenRooms (covers):</b> Reporting &rarr; <b>Reservations Export</b> &rarr; each venue &rarr; same week &rarr; status <b>Complete</b> &rarr; <b>Export &rarr; CSV</b>.</li></ol></div>'
  +'<div class="panel"><h2 style="margin-top:0">Step 2 &middot; Upload &amp; calculate</h2><div class="divider"></div><div class="field"><label>Week ending (Sunday)</label><input type="date" id="weeklabel"></div><div class="drop">Select every CSV for the week (all venues).<br><input type="file" id="files" multiple accept=".csv,.txt"></div><div style="margin-top:12px"><span class="btn" onclick="processFiles()">Calculate</span></div><div id="preview"></div></div>'
- +'<div class="panel"><h2 style="margin-top:0">Step 3 &middot; Publish (encrypted)</h2><div class="divider"></div><p style="font-size:12px">Encrypt the updated data and download <b>data.json</b>, then upload it to the GitHub repo (replace the old one). The live site refreshes within ~a minute.</p>'+setpw+'<div style="margin-top:10px"><span class="btn" onclick="publishEncrypted()">Encrypt &amp; download data.json</span></div><div id="pubmsg"></div></div>';}
+ +'<div class="panel"><h2 style="margin-top:0">Step 3 &middot; Publish</h2><div class="divider"></div><p style="font-size:12px">This encrypts the updated data and saves it straight to the live dashboard - no files, no downloads. Anyone with the password sees it on their next refresh.</p>'+setpw+'<div style="margin-top:10px"><span class="btn" onclick="publishEncrypted()">Publish live</span></div><div id="pubmsg"></div></div>';}
 function svgTrend(){var W=940,H=300,pL=46,pR=150,pT=18,pB=34,ymin=1.0,ymax=3.6;var maxw=0;VENUES.forEach(function(v){maxw=Math.max(maxw,DATA.venues[v].weeks.length-1);});if(maxw<1)maxw=1;
  function X(i){return pL+i/maxw*(W-pL-pR);}function Y(val){return H-pB-(val-ymin)/(ymax-ymin)*(H-pT-pB);}
  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,Arial,sans-serif">';
